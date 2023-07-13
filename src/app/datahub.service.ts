@@ -2,7 +2,8 @@
 import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { interval, mergeMap, Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,8 @@ export class DatahubService {
   constructor(private http: HttpClient) {}
  
   getData(assetId: string): Observable<any> {
-    return this.http.get(this.baseURL + '/data' + '?asset=' + assetId);
+    return interval(2500).pipe(
+      mergeMap(() => this.http.get(this.baseURL + '/data' + '?asset=' + assetId)));
   }
+  
 }
