@@ -46,11 +46,12 @@ export class Tank3dComponent implements AfterViewInit {
     this.createControls();
   }
 
-  
- updateLevel(event: any) {
-
- }
-
+  updateLevel(event: any) {
+    if (this.liquid) {
+      this.liquid.scale.z = event / 50;
+      this.liquid.position.z = 0 - event / 50;
+    }
+  }
 
   private animatetank() {
     if (this.liquid) {
@@ -140,7 +141,7 @@ export class Tank3dComponent implements AfterViewInit {
     let component: Tank3dComponent = this;
     (function render() {
       component.renderer.render(component.scene, component.camera);
-      component.animatetank();
+      // component.animatetank();
       requestAnimationFrame(render);
     }());
   }
