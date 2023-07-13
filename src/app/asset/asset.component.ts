@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./asset.component.css']
 })
 export class AssetComponent {
-
+  public assets = ['Tank1', 'Tank2', 'Tank3'];
 }

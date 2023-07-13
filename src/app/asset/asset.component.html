@@ -1,1 +1,9 @@
-<p>asset works!</p>
+
+<mat-form-field>
+    <mat-label>Asset</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let asset of assets" [value]="asset">
+        {{asset}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
