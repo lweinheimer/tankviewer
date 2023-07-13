@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-level',
@@ -6,6 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./level.component.css']
 })
 export class LevelComponent {
+  @Output() levelChange = new EventEmitter<number>();
   public level = 0;
-  update() {}
+
+  update() {
+    this.levelChange.emit(this.level);
+  }
 }
