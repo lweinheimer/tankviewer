@@ -13,7 +13,7 @@ export class TankComponent {
 
   constructor(private datahub: DatahubService) {
     datahub.getData('TankID').subscribe(data => {
-      this.level = parseFloat(data[0].value);
+      this.level = Math.min(parseFloat(data[0].value),68);
     });
   }
 }
