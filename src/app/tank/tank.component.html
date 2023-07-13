@@ -1,19 +1,15 @@
 
 <div class="tank">
     <svg viewBox="-2 -2 122 96" class="inside">
-        <rect class="c" x="0" y="25" width="118" height="55" />
-        <ellipse cx="59" cy="25" rx="59" ry="12" class="top"/>
         <ellipse cx="59" cy="80" rx="59" ry="12" />
+        <rect class="c" x="0" [attr.y]="80 - level" width="118" [attr.height]="level" />
+        <ellipse cx="59" [attr.cy]="80 - level" rx="59" ry="12" class="top"/>
     </svg>
-    
     <svg viewBox="-2 -2 122 96" class="outside">
         <ellipse cx="59" cy="12" rx="59" ry="12" />
         <ellipse cx="59" cy="80" rx="59" ry="12" />
         <line x1="0" y1="12" x2="0" y2="80" />
         <line x1="118" y1="12" x2="118" y2="80" />
     </svg>
-    <div class="level">
-        <app-level class="level"></app-level>
-    </div>
-  </div>
-  
+    <app-level class="level" (levelChange)="update($event)"></app-level>
+</div>
