@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./tank.component.css']
 })
 export class TankComponent {
+  public level = 0;
 
+  update(event: number) {
+    this.level = event;
+  }
 }
