@@ -1,3 +1,5 @@
 
-<canvas #canvas id="canvas" class="tank" canvas>
-    
+<div>
+    <canvas #canvas id="canvas" class="tank"></canvas>
+    <app-level (levelChange)="updateLevel($event)"></app-level>
+</div>

@@ -46,6 +46,12 @@ export class Tank3dComponent implements AfterViewInit {
     this.createControls();
   }
 
+  
+ updateLevel(event: any) {
+
+ }
+
+
   private animatetank() {
     if (this.liquid) {
       if(this.liquid.scale.z < 1) {
