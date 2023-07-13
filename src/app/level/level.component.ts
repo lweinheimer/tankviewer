@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./level.component.css']
 })
 export class LevelComponent {
-
+  public level = 0;
+  update() {}
 }

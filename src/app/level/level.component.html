@@ -1,4 +1,8 @@
 
-<mat-slider min="0" max="50">
-    <input matSliderThumb>
-</mat-slider>
+<div>
+    <mat-slider min="0" max="50">
+        <input matSliderThumb [(ngModel)]="level" (change)="update()">
+    </mat-slider>
+    {{level}}
+    </div>
+    
