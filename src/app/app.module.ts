@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +10,10 @@ import { Tank3dComponent } from './tank3d/tank3d.component';
 import { LevelComponent } from './level/level.component';
 import { AssetComponent } from './asset/asset.component';
 
+ 
+import { MatSliderModule } from '@angular/material/slider';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,11 +21,13 @@ import { AssetComponent } from './asset/asset.component';
     TankComponent,
     Tank3dComponent,
     LevelComponent,
-    AssetComponent
+    AssetComponent,
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
