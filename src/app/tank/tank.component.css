@@ -1,10 +1,12 @@
 
+
 .tank {
     display: flex;
     align-items: center;
     justify-content: center;
     height: calc(100% - 64px);
 }
+
 
 svg {
     width: 50%;
